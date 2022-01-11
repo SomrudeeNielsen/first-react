@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Modal from "./components/Modal";
 
-function App() {
+
+
+
+export default function App() {
+  const [status, setStatus] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {status && (
+        <Modal closeModal={() => setStatus(false)}>
+          <p>This is the modal content</p>
+        </Modal>
+      )}
+      <div className="container">
+        <Navbar />
+        <Home />
+        <img class="image"src="images/Pim.jpg" alt="pim"></img>
+
+        <button className="openModalBtn"  
+        onClick={() => setStatus(true)}>Contact Me</button>
+      
+      </div>
     </div>
   );
 }
-
-export default App;

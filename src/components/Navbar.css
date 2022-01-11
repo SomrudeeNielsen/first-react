@@ -1,0 +1,69 @@
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    
+}
+
+.nav-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 1;
+    padding-top: 3.75rem;
+    overflow-x: hidden;
+       
+}
+
+.nav-menu.active {
+    background-color:#111;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    left: 40px;
+}
+
+.nav-item {
+    margin: 1.5rem;
+    font-size: 2rem;
+    justify-content: center;
+}
+.navbar a {
+    display: block;
+    padding: 1.25rem 1.75rem;
+    text-decoration: none;
+    color: #ccc;
+    
+}
+
+.navbar a:hover {
+    color: #fff;
+    transition: 0.4s;
+}
+
+.hamburger {
+    display: flex;
+    cursor: pointer;
+    
+}
+
+#sidebar {
+    padding: 1.25rem;
+    transition: margin-left 0.4s;
+    overflow: hidden;
+    width: 100%;
+}
+.mainpage {
+    margin: auto;
+    width: 75%;
+    border: 5px transparent;
+    padding: 10px;
+}
+
